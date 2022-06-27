@@ -45,8 +45,4 @@ int main(){
     ll.push(4);
     ll.push(5);
     ll.push(6);
-
-    Solution obj;
-    Node* ans = obj.middleNode();
-                
 }
