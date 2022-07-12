@@ -40,6 +40,19 @@ node* reverseLinkedList(node* &head){
     return head;
 }
 
+// Using Recurrsion
+
+node* reverse(node* head){
+    if(head==NULL || head->next==NULL) return head;
+    
+    node* newHead = reverse(head->next);
+    node* headNext = head->next;
+    headNext->next = head;
+    head->next = NULL;
+
+    return newHead;
+}
+
 void display(node* head){
     node* temp = head;
     while(temp!=NULL){
